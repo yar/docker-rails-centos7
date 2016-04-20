@@ -11,7 +11,7 @@ RUN yum install -y mariadb-devel
 RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 RUN curl -sSL https://get.rvm.io | bash -s stable
 # If not running with bash -l, rvm command is not available
-RUN echo -e "install: --no-document\nupdate: --no-document" > /etc/gemrc
+RUN echo -e "install: --no-document\nupdate: --no-document" ~/.gemrc
 RUN bash -lc 'rvm install 2.3.0'
 RUN bash -lc 'rvm use 2.3.0 --default'
 RUN bash -lc 'gem install bundler --no-document'
