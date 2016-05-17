@@ -9,8 +9,8 @@ It includes:
 * bundler >= 1.11
 * common tools for compiling gem native extension, like gcc, make
 * mariadb-devel (required for using [mysql2](https://rubygems.org/gems/mysql2/) gem)
-* node >= 5.8
-* npm >= 3.7
+* node >= 6.0
+* npm >= 3.8
 
 ## License
 
