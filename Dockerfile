@@ -12,7 +12,7 @@ RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A170311380
     curl -sSL https://get.rvm.io | bash -s stable && \
     echo -e "install: --no-document\nupdate: --no-document" > ~/.gemrc
 # If not running with bash -l, rvm command is not available
-RUN bash -lc 'rvm install 2.3.1 && rvm use 2.3.1 --default && gem install bundler --no-document'
+RUN bash -lc 'rvm install 2.3.1 && rvm use 2.3.1 --default && gem update --system && gem install bundler --no-document'
 
 # Node
 RUN curl -sL https://rpm.nodesource.com/setup_6.x | bash - && yum install -y nodejs
