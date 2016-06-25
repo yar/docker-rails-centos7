@@ -1,7 +1,7 @@
 FROM centos:7
 
 # Development tools
-RUN yum install -y git openssh gcc make curl which tar
+RUN yum install -y git openssh gcc make curl which tar gzip bzip2 unzip zip
 
 # Dependencies for compiling some gems native extension
 # Rquired by mysql2
