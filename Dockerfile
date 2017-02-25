@@ -1,9 +1,9 @@
 FROM centos:7
 
 ENV LANG=en_US.UTF-8 \
-    RUBY_MAJOR=2.3 \
-    RUBY_VERSION=2.3.3 \
-    RUBY_DOWNLOAD_SHA256=241408c8c555b258846368830a06146e4849a1d58dcaf6b14a3b6a73058115b7 \
+    RUBY_MAJOR=2.4 \
+    RUBY_VERSION=2.4.0 \
+    RUBY_DOWNLOAD_SHA256=152fd0bd15a90b4a18213448f485d4b53e9f7662e1508190aa5b702446b29e3d \
     RUBY_DOWNLOAD_MIRROR=https://cache.ruby-lang.org/pub/ruby/
 
 # Development tools for compiling Ruby and native gem extension
