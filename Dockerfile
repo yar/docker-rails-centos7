@@ -17,6 +17,8 @@ RUN yum update -y && \
     yum install -y epel-release yum-utils && \
     yum-config-manager --enable epel && \
     yum install -y nodejs && \
+    curl -o /etc/yum.repos.d/yarn.repo https://dl.yarnpkg.com/rpm/yarn.repo && \
+    yum install -y yarn && \
     yum clean all
 
 # https://github.com/docker-library/ruby/blob/master/2.3/Dockerfile
