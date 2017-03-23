@@ -2,8 +2,8 @@ FROM centos:7
 
 ENV LANG=en_US.UTF-8 \
     RUBY_MAJOR=2.4 \
-    RUBY_VERSION=2.4.0 \
-    RUBY_DOWNLOAD_SHA256=152fd0bd15a90b4a18213448f485d4b53e9f7662e1508190aa5b702446b29e3d \
+    RUBY_VERSION=2.4.1 \
+    RUBY_DOWNLOAD_SHA256=a330e10d5cb5e53b3a0078326c5731888bb55e32c4abfeb27d9e7f8e5d000250 \
     RUBY_DOWNLOAD_MIRROR=https://cache.ruby-lang.org/pub/ruby/
 
 # Development tools for compiling Ruby and native gem extension
@@ -17,6 +17,8 @@ RUN yum update -y && \
     yum install -y epel-release yum-utils && \
     yum-config-manager --enable epel && \
     yum install -y nodejs && \
+    curl -o /etc/yum.repos.d/yarn.repo https://dl.yarnpkg.com/rpm/yarn.repo && \
+    yum install -y yarn && \
     yum clean all
 
 # https://github.com/docker-library/ruby/blob/master/2.3/Dockerfile
