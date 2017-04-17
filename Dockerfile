@@ -36,3 +36,5 @@ RUN set -ex && \
     cd / && rm -rf /build && \
     gem update --system && gem install bundler && \
     rm -rf "$(gem env home)"/cache/*
+
+RUN yum install -y sqlite-devel
